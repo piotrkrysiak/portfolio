@@ -3,10 +3,9 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 import arrow from "./../assets/white-arrow.svg";
 
-/* scroll component */
 const Scroll = () => {
   return (
-    <Link to="about" offset={50}>
+    <Link to="about">
       <ScrollContainer>
         <img className="hero__arrow" src={arrow} alt="arrow" />
       </ScrollContainer>

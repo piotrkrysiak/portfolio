@@ -19,8 +19,14 @@ export const Navbar = () => {
       }
     }
   };
-  const handleCloseMobile = () => {
+
+  const handleColeMobileTop = () => {
     animateScroll.scrollToTop();
+    setClick(false);
+  };
+
+  const handleCloseMobile = () => {
+    disableScroll.off();
     setClick(false);
   };
 
@@ -32,17 +38,13 @@ export const Navbar = () => {
     }
   };
 
-  if (click === false) {
-    window.addEventListener("scroll", changeBackground);
-  } else {
-    window.removeEventListener("scroll", changeBackground);
-  }
+  window.addEventListener("scroll", changeBackground);
 
   return (
     <>
       <nav className={navbar ? "navbar active" : "navbar"}>
         <div className="navbar-container">
-          <p className="navbar-logo"  onClick={handleCloseMobile}>
+          <p className="navbar-logo" onClick={handleColeMobileTop}>
             <i className="fas fa-code" />
           </p>
           <div className="menu-icon" onClick={handleClick}>
@@ -50,7 +52,7 @@ export const Navbar = () => {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <p className="nav-links" onClick={handleCloseMobile}>
+              <p className="nav-links" onClick={handleColeMobileTop}>
                 Home
               </p>
             </li>
@@ -61,7 +63,7 @@ export const Navbar = () => {
                 offset={0}
                 smooth={true}
                 className="nav-links"
-                onClick={handleClick}
+                onClick={handleCloseMobile}
               >
                 About
               </Link>

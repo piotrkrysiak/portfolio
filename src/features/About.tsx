@@ -7,6 +7,7 @@ import tlo from "./../app/assets/Background.svg";
 interface Props {
   aboutProps: PageData;
 }
+
 export default function About({ aboutProps }: Props) {
   const { aboutHreder, aboutDescription, aboutImg } = aboutProps;
   AOS.init();
@@ -38,6 +39,9 @@ const AboutContainer = styled.div`
     font-size: 1.5rem;
     flex-direction: column;
   }
+  @media screen and (max-width: 576px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const AboutLeft = styled.div`
@@ -48,7 +52,8 @@ const AboutLeft = styled.div`
     white-space: pre-line;
   }
   @media screen and (max-width: 960px) {
-    padding: 1rem;
+    padding: 5rem 2rem 0rem;
+    flex: 0.4;
   }
 `;
 
@@ -58,12 +63,12 @@ const AboutRight = styled.div`
   padding: 4rem;
   flex: 0.5;
   > img {
-    width: 100%;
+    width: 40vw;
     height: auto;
     border-radius: 50%;
     padding: 5px;
     border: 5px solid #000;
-    animation: spin 5s alternate  infinite;
+    animation: spin 5s alternate infinite;
   }
   @keyframes spin {
     0% {
@@ -75,12 +80,20 @@ const AboutRight = styled.div`
   }
 
   @media screen and (max-width: 960px) {
+    padding: 0;
+    margin-bottom: 3rem;
+    flex: 0.6 
     > img {
-      width: 90%;
-      height: auto;
-      border-radius: 50%;
-      padding: 5px;
-      border: 5px solid #000;
+      width: 60vw;
+    }
+    @media screen and (max-width: 576px) {
+      > img {
+        width: 80vw;
+        height: auto;
+        border-radius: 50%;
+        padding: 3px;
+        border: 3px solid #000;
+      }
     }
   }
 `;
