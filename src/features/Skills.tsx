@@ -6,7 +6,7 @@ import ItemsOthers from "../app/components/ItemsOthers";
 export default function Skills() {
   return (
     <>
-      <SkillsContainer >
+      <SkillsContainer id="skills">
         <TitleContainer>
           <h1>Używam i uczę się: </h1>
         </TitleContainer>
@@ -14,7 +14,7 @@ export default function Skills() {
         <TitleContainer>
           <h1>Inne: </h1>
         </TitleContainer>
-        <ItemsOthers />
+        {<ItemsOthers />}
       </SkillsContainer>
     </>
   );

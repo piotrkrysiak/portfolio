@@ -68,6 +68,18 @@ export const Navbar = () => {
                 About
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="skills"
+                duration={500}
+                offset={0}
+                smooth={true}
+                className="nav-links"
+                onClick={handleCloseMobile}
+              >
+                Skills
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

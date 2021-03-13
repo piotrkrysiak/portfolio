@@ -7,6 +7,13 @@ import tlo from "./../app/assets/Background.svg";
 interface Props {
   aboutProps: PageData;
 }
+interface NewlineProps {
+  text: string;
+}
+function NewlineText({ text }: NewlineProps) {
+  const newText = text.split("\n").map((str: string) => <p>{str}</p>);
+  return <>{newText}</>;
+}
 
 export default function About({ aboutProps }: Props) {
   const { aboutHreder, aboutDescription, aboutImg } = aboutProps;
@@ -15,7 +22,7 @@ export default function About({ aboutProps }: Props) {
     <AboutContainer id="about">
       <AboutLeft data-aos="fade-up" data-aos-duration="2000">
         <h1>{aboutHreder}</h1>
-        <p>{aboutDescription}</p>
+        <NewlineText text={aboutDescription} />
       </AboutLeft>
       <AboutRight data-aos="fade-up" data-aos-duration="2000">
         <img src={aboutImg} alt="my-img" />
@@ -48,9 +55,7 @@ const AboutLeft = styled.div`
   justify-content: center;
   padding: 4rem;
   flex: 0.5;
-  p > {
-    white-space: pre-line;
-  }
+
   @media screen and (max-width: 960px) {
     padding: 5rem 2rem 0rem;
     flex: 0.4;
@@ -63,8 +68,8 @@ const AboutRight = styled.div`
   padding: 4rem;
   flex: 0.5;
   > img {
-    width: 40vw;
-    height: auto;
+    width: 25vw;
+    height: 25vw;
     border-radius: 50%;
     padding: 5px;
     border: 5px solid #000;
@@ -82,14 +87,15 @@ const AboutRight = styled.div`
   @media screen and (max-width: 960px) {
     padding: 0;
     margin-bottom: 3rem;
-    flex: 0.6 
+    flex: 0.6;
     > img {
-      width: 60vw;
+      width: 50vw;
+      height: 50vw;
     }
     @media screen and (max-width: 576px) {
       > img {
-        width: 80vw;
-        height: auto;
+        width: 50vw;
+        height: 50vw;
         border-radius: 50%;
         padding: 3px;
         border: 3px solid #000;
