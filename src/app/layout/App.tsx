@@ -24,12 +24,12 @@ const App = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <>
           <Navbar />
           <Hero heroProps={AboutData} />
           <About aboutProps={AboutData} />
           <Skills />
-        </div>
+        </>
       )}
     </>
   );

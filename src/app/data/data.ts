@@ -6,7 +6,7 @@ import gitLogo from "./../assets/skills/git.svg";
 import reactLogo from "./../assets/skills/react.svg";
 import styledLogo from "./../assets/skills/styled-components.svg";
 import typescriptLogo from "./../assets/skills/typescript.svg";
-import mobxLogo from "./../assets/skills/mobx.png";
+import mobxLogo from "./../assets/skills/mobx.svg";
 import englishLogo from "./../assets/skills/english.svg";
 import dotnetLogo from "./../assets/skills/dotnet.svg";
 import sqlliteLogo from "./../assets/skills/sqlite.svg";
@@ -20,8 +20,7 @@ import { Skill } from "../models/Skill";
 
 export const AboutData: PageData = {
   aboutHreder: "Cześć!",
-  aboutDescription:
-    "Nazywam się Piotr Krysiak. \n Jestem studentem Informatyki. \n Specjalizacja: Programowanie Aplikacji Internetowych. Aktualnie zajmuję się głównie nauką React TypeSrcipt oraz .Net",
+  aboutDescription: "Nazywam się Piotr Krysiak. \n Jestem studentem Informatyki na trzecim roku. \n Specjalizację jaką wybrałem to Programowanie Aplikacji Internetowych. \n Programowaniem interesuję się od liceum, \n przez te wszystkie lata poznawałem różne języki oraz technologię natomiast najlepiej się czuję przy tworzeniu interfejsów użytkownika. \n Aktualnie zajmuję się głównie nauką oraz tworzeniem stron przy użyciu React i TypeScript. \n Są to technologię w których chciałbym się rozwijać. \n  Znam również technologię backendowe jak .NET i Sqlite.",
   aboutImg:
     "https://scontent.fktw4-1.fna.fbcdn.net/v/t1.0-9/106127592_3039742716132900_8202010127090341219_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Obc_4zqJiosAX8sZ8o-&_nc_ht=scontent.fktw4-1.fna&oh=d0d8dc8e957682b5cbcee89160f9d534&oe=606995D6",
   heroImg:

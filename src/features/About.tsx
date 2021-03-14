@@ -10,8 +10,11 @@ interface Props {
 interface NewlineProps {
   text: string;
 }
+
 function NewlineText({ text }: NewlineProps) {
-  const newText = text.split("\n").map((str: string) => <p>{str}</p>);
+  const newText = text
+    .split("\n")
+    .map((str: string, index) => <p key={index}>{str}</p>);
   return <>{newText}</>;
 }
 
