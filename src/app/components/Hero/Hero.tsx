@@ -1,5 +1,5 @@
 import React from "react";
-import { PageData } from "../../data/PageData";
+import { PageData } from "../../models/PageData";
 import Scroll from "../Scroll";
 import "./Hero.css";
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function LoadingScreen() {
   return (
     <LoadingContainer>
-        TODO:
+      TODO:
       <div>Loading</div>
     </LoadingContainer>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { PageData } from "../app/data/PageData";
+import { PageData } from "../app/models/PageData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import tlo from "./../app/assets/Background.svg";

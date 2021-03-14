@@ -1,28 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import Items from "../app/components/Items";
-import ItemsOthers from "../app/components/ItemsOthers";
+import ItemsOthers from "../app/components/Items";
+import { itemsData, itemsDataConfig, itemsDataOthers, itemsDataToLearn, title, titleConfig, titleOthers, titleToLearn } from "../app/data/data";
+
+interface IHeadingStyled {
+  primary: boolean;
+}
 
 export default function Skills() {
   return (
     <>
-      <SkillsContainer id="skills">
-        <TitleContainer>
-          <h1>Używam i uczę się: </h1>
-        </TitleContainer>
-        <Items />
-        <TitleContainer>
-          <h1>Inne: </h1>
-        </TitleContainer>
-        {<ItemsOthers />}
+      <SkillsContainer primary={false} id="skills">
+        <ItemsOthers title={title} skills={itemsData} />
+        <ItemsOthers title={titleOthers} skills={itemsDataOthers} />
+      </SkillsContainer>
+      <SkillsContainer primary>
+        <ItemsOthers title={titleToLearn} skills={itemsDataToLearn} />
+        <ItemsOthers title={titleConfig} skills={itemsDataConfig} />
       </SkillsContainer>
     </>
   );
 }
 
-const SkillsContainer = styled.div`
-  background-color: #000;
-  color: white;
+const SkillsContainer = styled("div")<IHeadingStyled>`
+  background-color: ${({ primary }: IHeadingStyled) =>
+  primary ? "white" : "black"};
+  color: ${({ primary }: IHeadingStyled) => (primary ? "blac" : "white")};
   object-fit: cover;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
@@ -30,8 +33,6 @@ const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   @media screen and (max-width: 576px) {
-    height: calc(var(--vh, 1vh) * 250);
+    height: calc(var(--vh, 1vh) * 180);
   }
 `;
-
-const TitleContainer = styled.div``;
