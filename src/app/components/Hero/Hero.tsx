@@ -1,6 +1,6 @@
 import React from "react";
 import { PageData } from "../../models/PageData";
-
+import back from "./../../assets/back.jpg";
 import "./Hero.css";
 
 interface Props {
@@ -12,19 +12,19 @@ export const Hero = ({ heroProps }: Props) => {
   return (
     <>
       <div className="hero-container" id="home">
-        <img
-          className="img-container"
-          src={
-            "https://images.pexels.com/photos/2885320/pexels-photo-2885320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-          }
-          alt="img-container"
-        />
+        <img className="img-container" src={back} alt="img-container" />
         <p>{heroP}</p>
         <h1>{heroH}</h1>
         <div className="hero-btns">
-          <i className="fas fa-at"></i>
-          <i className="fab fa-github"></i>
-          <i className="fas fa-file-signature"></i>
+          <a href="mailto:krysiakpiotr14@gmail.com" target="blank">
+            <i className="fas fa-at"></i>
+          </a>
+          <a href="https://github.com/plotrekpl" target="blank">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="cv.com" target="blank">
+            <i className="fas fa-file-signature"></i>
+          </a>
         </div>
       </div>
     </>

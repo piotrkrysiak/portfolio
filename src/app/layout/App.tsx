@@ -6,6 +6,7 @@ import About from "../../features/About";
 import { AboutData } from "../data/data";
 import Skills from "../../features/Skills";
 import Loading from "../components/Loading";
+import Contact from "../../features/Contact";
 //TODO: Avatar design to change
 //Footer
 //Loading
@@ -29,6 +30,7 @@ const App = () => {
           <Hero heroProps={AboutData} />
           <About aboutProps={AboutData} />
           <Skills />
+          <Contact />
         </>
       )}
     </>

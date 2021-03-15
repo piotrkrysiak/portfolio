@@ -17,7 +17,7 @@
   object-fit: contain;
   animation: indicator 3s slidein;
 }
-.hero-container:hover{
+.hero-container:hover {
   animation: indicator 3s slidein;
 }
 
@@ -37,13 +37,16 @@
   color: #fff;
 }
 
-.hero-btns .btn {
-  margin: 6px;
+.hero-btns a {
+  text-decoration: none;
+  color: #fff;
 }
+
 
 .fa-at,
 .fa-github,
 .fa-file-signature {
+
   font-size: 40px;
   margin-right: 10px;
   cursor: pointer;

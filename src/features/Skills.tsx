@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import ItemsOthers from "../app/components/Items";
 import arrow from "../app/assets/white-arrow.svg";
-import AOS from "aos";
-
 import {
   itemsData,
   itemsDataConfig,
@@ -21,7 +19,6 @@ interface IHeadingStyled {
 }
 
 export default function Skills() {
-  AOS.init();
   return (
     <>
       <SkillsContainer primary={false} id="skills">
@@ -47,8 +44,8 @@ export default function Skills() {
 
 const SkillsContainer = styled("div")<IHeadingStyled>`
   background-color: ${({ primary }: IHeadingStyled) =>
-    primary ? "white" : "black"};
-  color: ${({ primary }: IHeadingStyled) => (primary ? "blac" : "white")};
+    primary ? "#cdaaae" : "#0e0a1b"};
+  color: ${({ primary }: IHeadingStyled) => (primary ? "#0e0a1b" : "#cdaaae")};
   object-fit: cover;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
@@ -70,6 +67,7 @@ const SkillsContainer = styled("div")<IHeadingStyled>`
 
     > img {
       width: 20px;
+      color: #cdaaae;
       margin: 20px;
     }
   }

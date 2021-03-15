@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { PageData } from "../app/models/PageData";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import tlo from "./../app/assets/Background.svg";
+import AOS from "aos";
+
 interface Props {
   aboutProps: PageData;
 }
@@ -19,15 +19,15 @@ function NewlineText({ text }: NewlineProps) {
 }
 
 export default function About({ aboutProps }: Props) {
-  const { aboutHreder, aboutDescription, aboutImg } = aboutProps;
   AOS.init();
+  const { aboutHreder, aboutDescription, aboutImg } = aboutProps;
   return (
     <AboutContainer id="about">
       <AboutLeft data-aos="fade-up" data-aos-duration="2000">
         <h1>{aboutHreder}</h1>
         <NewlineText text={aboutDescription} />
       </AboutLeft>
-      <AboutRight data-aos="fade-up" data-aos-duration="2000">
+      <AboutRight data-aos="fade-down" data-aos-duration="2000">
         <img src={aboutImg} alt="my-img" />
       </AboutRight>
     </AboutContainer>
@@ -35,11 +35,11 @@ export default function About({ aboutProps }: Props) {
 }
 
 const AboutContainer = styled.div`
-  background: url(${tlo});
   object-fit: cover;
   height: calc(var(--vh, 1vh) * 100);
   width: 100%;
-  background-color: #fff;
+  color: #0e0a1b;
+  background-color: #cdaaae;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -51,6 +51,9 @@ const AboutContainer = styled.div`
   }
   @media screen and (max-width: 576px) {
     font-size: 1.2rem;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -101,7 +104,7 @@ const AboutRight = styled.div`
         height: 50vw;
         border-radius: 50%;
         padding: 3px;
-        border: 3px solid #000;
+        border: 2px solid #0e0a1b;
       }
     }
   }
