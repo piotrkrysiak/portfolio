@@ -71,9 +71,22 @@ const SkillsContainer = styled("div")<IHeadingStyled>`
       margin: 20px;
     }
   }
+  @media screen and (max-width: 400px) {
+    font-size: 0.8rem;
+    
+  }
+
   @media screen and (max-width: 576px) {
-    height: calc(var(--vh, 1vh) * 180);
     height: ${({ primary }: IHeadingStyled) =>
-      primary ? "calc(var(--vh, 1vh) * 120)" : "calc(var(--vh, 1vh) * 180)"};
+      primary ? "calc(var(--vh, 1vh) * 150)" : "calc(var(--vh, 1vh) * 200)"};
+  }
+  @media screen and (max-height: 900px) and (min-width: 960px) {
+    height: ${({ primary }: IHeadingStyled) =>
+      primary ? "calc(var(--vh, 1vh) * 200)" : "calc(var(--vh, 1vh) * 250)"};
+  }
+
+  @media screen and (max-height: 500px) {
+    height: ${({ primary }: IHeadingStyled) =>
+      primary ? "calc(var(--vh, 1vh) * 300)" : "calc(var(--vh, 1vh) * 400)"};
   }
 `;

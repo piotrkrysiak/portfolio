@@ -52,8 +52,17 @@ const AboutContainer = styled.div`
   @media screen and (max-width: 576px) {
     font-size: 1.2rem;
   }
+
   @media screen and (max-width: 400px) {
     font-size: 0.8rem;
+    font-weight: 300;
+  }
+  @media screen and (max-height: 500px) {
+    height: calc(var(--vh, 1vh) * 300);
+  }
+  @media screen and (max-height: 900px) and (min-width: 960px) {
+    height: calc(var(--vh, 1vh) * 150);
+    font-size: 1.5rem;
   }
 `;
 
@@ -61,6 +70,42 @@ const AboutLeft = styled.div`
   justify-content: center;
   padding: 4rem;
   flex: 0.5;
+  :hover {
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+    mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+    -webkit-mask-size: 200%;
+    mask-size: 200%;
+    animation: shine 2s infinite;
+  }
+
+  @-webkit-keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
+  @keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
 
   @media screen and (max-width: 960px) {
     padding: 5rem 2rem 0rem;
@@ -73,6 +118,7 @@ const AboutRight = styled.div`
   justify-content: center;
   padding: 4rem;
   flex: 0.5;
+
   > img {
     width: 25vw;
     height: 25vw;
@@ -80,6 +126,9 @@ const AboutRight = styled.div`
     padding: 5px;
     border: 5px solid #000;
     animation: spin 5s alternate infinite;
+    :hover {
+      border: none;
+    }
   }
   @keyframes spin {
     0% {
@@ -100,8 +149,8 @@ const AboutRight = styled.div`
     }
     @media screen and (max-width: 576px) {
       > img {
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
         border-radius: 50%;
         padding: 3px;
         border: 2px solid #0e0a1b;

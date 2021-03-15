@@ -5,4 +5,6 @@ export interface PageData {
   heroImg: string;
   heroP: string;
   heroH: string;
+  mail: string;
+  phone: string;
 }

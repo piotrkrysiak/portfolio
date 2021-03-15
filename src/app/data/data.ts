@@ -17,18 +17,21 @@ import gatsbyLogo from "./../assets/skills/gatsby.svg";
 import vscLogo from "./../assets/skills/vsc.svg";
 import prittierLogo from "./../assets/skills/prettier.svg";
 import responsiveLogo from "./../assets/skills/responsive.svg";
+import prof from "./../assets/prof.png";
+
 import { Skill } from "../models/Skill";
 
 export const AboutData: PageData = {
   aboutHreder: "Cześć!",
   aboutDescription:
     "Nazywam się Piotr Krysiak. \n Jestem studentem Informatyki \n na Politechnice Częstochowskiej na III roku. \n Specjalizację jaką wybrałem to Programowanie Aplikacji Internetowych. \n Programowaniem interesuję się od liceum, \n przez te wszystkie lata poznawałem różne języki oraz technologię jak np. SQL i .NET. \n Najlepiej natomiast się czuję przy tworzeniu interfejsów użytkownika. \n Aktualnie zajmuję się głównie nauką oraz tworzeniem stron przy użyciu React i TypeScript. \n Są to technologię w których chciałbym się rozwijać. \n ",
-  aboutImg:
-    "https://scontent.fktw4-1.fna.fbcdn.net/v/t1.0-9/106127592_3039742716132900_8202010127090341219_o.jpg?_nc_cat=110&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Obc_4zqJiosAX8sZ8o-&_nc_ht=scontent.fktw4-1.fna&oh=d0d8dc8e957682b5cbcee89160f9d534&oe=606995D6",
+  aboutImg: prof,
   heroImg:
     "https://cdn.pixabay.com/photo/2021/03/02/12/20/mountains-6062271_960_720.jpg",
   heroP: "My name is Piotr",
   heroH: "I'M DEVELOPER",
+  mail: "krysiakpiotr14@gmail.com",
+  phone: "790 720 515"
 };
 
 export const title = "Używam i uczę się:";
