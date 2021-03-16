@@ -57,12 +57,17 @@ const AboutContainer = styled.div`
     font-size: 0.8rem;
     font-weight: 300;
   }
-  @media screen and (max-height: 500px) {
-    height: calc(var(--vh, 1vh) * 300);
+  @media screen and (max-height: 600px) {
+    height: calc(var(--vh, 1vh) * 170);
   }
   @media screen and (max-height: 900px) and (min-width: 960px) {
     height: calc(var(--vh, 1vh) * 150);
     font-size: 1.5rem;
+  }
+  @media screen and (min-width: 500px) and (max-height: 900px) and (max-width: 960px) {
+    flex-direction: row;
+    height: calc(var(--vh, 1vh) * 180);
+    font-size: 0.8rem;
   }
 `;
 

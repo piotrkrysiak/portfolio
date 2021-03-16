@@ -73,7 +73,6 @@ const SkillsContainer = styled("div")<IHeadingStyled>`
   }
   @media screen and (max-width: 400px) {
     font-size: 0.8rem;
-    
   }
 
   @media screen and (max-width: 576px) {
@@ -82,11 +81,15 @@ const SkillsContainer = styled("div")<IHeadingStyled>`
   }
   @media screen and (max-height: 900px) and (min-width: 960px) {
     height: ${({ primary }: IHeadingStyled) =>
-      primary ? "calc(var(--vh, 1vh) * 200)" : "calc(var(--vh, 1vh) * 250)"};
+      primary ? "calc(var(--vh, 1vh) * 200)" : "calc(var(--vh, 1vh) * 280)"};
   }
 
   @media screen and (max-height: 500px) {
     height: ${({ primary }: IHeadingStyled) =>
       primary ? "calc(var(--vh, 1vh) * 300)" : "calc(var(--vh, 1vh) * 400)"};
+  }
+  @media screen and (min-width: 500px) and (max-height: 900px) and (max-width: 960px) {
+    height: ${({ primary }: IHeadingStyled) =>
+      primary ? "calc(var(--vh, 1vh) * 200)" : "calc(var(--vh, 1vh) * 280)"};
   }
 `;

@@ -7,4 +7,8 @@ export interface PageData {
   heroH: string;
   mail: string;
   phone: string;
+  hrefPhone: string;
+  hrefMail: string;
+  hrefGit: string;
+  hrefCV: string;
 }

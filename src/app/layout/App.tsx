@@ -12,29 +12,32 @@ import Contact from "../../features/Contact";
 //Loading
 //Portfolio
 
-const App = () => {
-  const [loading, setLoading] = useState(false);
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-  return (
-    <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          <Navbar />
-          <Hero heroProps={AboutData} />
-          <About aboutProps={AboutData} />
-          <Skills />
-          <Contact />
-        </>
-      )}
-    </>
-  );
-};
+export default function App() {
+  const [loading, setLoading] = useState(true);
 
-export default App;
+  useEffect(() => {
+    let unmounted = true;
+    setTimeout(() => {
+      if (unmounted) {
+        setLoading(false);
+      }
+    }, 2000);
+    return () => {
+      unmounted = false;
+    };
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  } else {
+    return (
+      <>
+        <Navbar />
+        <Hero heroProps={AboutData} />
+        <About aboutProps={AboutData} />
+        <Skills />
+        <Contact />
+      </>
+    );
+  }
+}

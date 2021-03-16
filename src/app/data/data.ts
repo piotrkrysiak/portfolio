@@ -24,14 +24,19 @@ import { Skill } from "../models/Skill";
 export const AboutData: PageData = {
   aboutHreder: "Cześć!",
   aboutDescription:
-    "Nazywam się Piotr Krysiak. \n Jestem studentem Informatyki \n na Politechnice Częstochowskiej na III roku. \n Specjalizację jaką wybrałem to Programowanie Aplikacji Internetowych. \n Programowaniem interesuję się od liceum, \n przez te wszystkie lata poznawałem różne języki oraz technologię jak np. SQL i .NET. \n Najlepiej natomiast się czuję przy tworzeniu interfejsów użytkownika. \n Aktualnie zajmuję się głównie nauką oraz tworzeniem stron przy użyciu React i TypeScript. \n Są to technologię w których chciałbym się rozwijać. \n ",
+    "Nazywam się Piotr Krysiak. \n Jestem studentem Informatyki na \n Politechnice Częstochowskiej i aktualnie rozpocząłem VI semestr. \n Specjalizację jaką wybrałem jest \n Programowanie AplikacjiInternetowych. \n Programowaniem interesuję się od liceum. \n Poznawałem różne języki oraz technologie jak np. SQL i .NET. \n Najlepiej natomiast czuję się przy tworzeniu interfejsów użytkownika. \n Obecnie zajmuję się głównie nauką \n oraz tworzeniem stron przy użyciu React i TypeScript. \n Są to technologie w których chciałbym się rozwijać. \n ",
   aboutImg: prof,
   heroImg:
     "https://cdn.pixabay.com/photo/2021/03/02/12/20/mountains-6062271_960_720.jpg",
   heroP: "My name is Piotr",
   heroH: "I'M DEVELOPER",
   mail: "krysiakpiotr14@gmail.com",
-  phone: "790 720 515"
+  phone: "790 720 515",
+  hrefPhone: "tel:790720515",
+  hrefMail: "mailto:krysiakpiotr14@gmail.com",
+  hrefGit: "https://github.com/plotrekpl",
+  hrefCV:
+    "https://drive.google.com/file/d/1uNwLYydlg6kVchfyoDyxyWfgytp0Tn6s/view?usp=sharing",
 };
 
 export const title = "Używam i uczę się:";

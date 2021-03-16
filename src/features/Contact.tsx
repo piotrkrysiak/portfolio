@@ -3,14 +3,14 @@ import styled from "styled-components";
 import { AboutData } from "../app/data/data";
 
 export default function Contact() {
-  const { phone, mail } = AboutData;
+  const { phone, mail, hrefMail, hrefPhone } = AboutData;
 
   return (
     <ContactContainer>
       <div data-aos="fade-right" data-aos-duration="2000">
         <RowContainer>
           <i className="fas fa-envelope"></i>
-          <a href="mailto:krysiakpiot14@gmail.com">
+          <a href={hrefMail}>
             <h1>{mail}</h1>
           </a>
         </RowContainer>
@@ -18,7 +18,7 @@ export default function Contact() {
       <div data-aos="fade-left" data-aos-duration="2000">
         <RowContainer>
           <i className="fas fa-phone"></i>
-          <a href="tel:790720515">
+          <a href={hrefPhone}>
             <h1>{phone}</h1>
           </a>
         </RowContainer>
@@ -70,11 +70,23 @@ const RowContainer = styled.div`
   }
   @media screen and (max-width: 960px) {
     font-size: 1.5rem;
+    .fa-phone,
+    .fa-envelope {
+      font-size: 1.5rem;
+    }
   }
   @media screen and (max-width: 576px) {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    .fa-phone,
+    .fa-envelope {
+      font-size: 1rem;
+    }
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 370px) {
     font-size: 0.6rem;
+    .fa-phone,
+    .fa-envelope {
+      font-size: 0.8rem;
+    }
   }
 `;

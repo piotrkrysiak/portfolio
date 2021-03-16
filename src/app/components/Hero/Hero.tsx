@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const Hero = ({ heroProps }: Props) => {
-  const { heroP, heroH } = heroProps;
+  const { heroP, heroH, hrefMail, hrefGit, hrefCV } = heroProps;
   return (
     <>
       <div className="hero-container" id="home">
@@ -16,13 +16,13 @@ export const Hero = ({ heroProps }: Props) => {
         <p>{heroP}</p>
         <h1>{heroH}</h1>
         <div className="hero-btns">
-          <a href="mailto:krysiakpiotr14@gmail.com" target="blank">
+          <a href={hrefMail} target="blank">
             <i className="fas fa-at"></i>
           </a>
-          <a href="https://github.com/plotrekpl" target="blank">
+          <a href={hrefGit} target="blank">
             <i className="fab fa-github"></i>
           </a>
-          <a href="cv.com" target="blank">
+          <a href={hrefCV} target="blank">
             <i className="fas fa-file-signature"></i>
           </a>
         </div>
