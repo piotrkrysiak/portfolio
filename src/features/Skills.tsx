@@ -27,7 +27,7 @@ export default function Skills() {
           <ItemsOthers title={titleOthers} skills={itemsDataOthers} />
           <Link to="skillsTwo">
             <div className="imgcon">
-              <img className="hero__arrow" src={arrow} alt="arrow" />
+              <img src={arrow} alt="arrow" />
             </div>
           </Link>
         </div>

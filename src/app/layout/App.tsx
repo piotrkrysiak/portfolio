@@ -7,10 +7,6 @@ import { AboutData } from "../data/data";
 import Skills from "../../features/Skills";
 import Loading from "../components/Loading";
 import Contact from "../../features/Contact";
-//TODO: Avatar design to change
-//Footer
-//Loading
-//Portfolio
 
 export default function App() {
   const [loading, setLoading] = useState(true);
